@@ -64,4 +64,4 @@ if __name__ == "__main__":
     eurovision_data["tokenized_tweet"] = \
         eurovision_data['tweet'].apply(tokenizer)
 
-    eurovision_data = pd.read_csv('./eurovision_tokenized.csv')
+    eurovision_data = pd.read_csv('./eurovision_.csv')

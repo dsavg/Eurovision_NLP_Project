@@ -1,31 +1,31 @@
 import pandas as pd
 import pycountry
-from itertools import chain
 import tweepy
 import matplotlib.pyplot as plt
 import pyLDAvis
 import pyLDAvis.gensim
-pyLDAvis.enable_notebook()
-from plotly import __version__
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-from plotly.grid_objs import Grid, Column
 import plotly.graph_objs as go
 import plotly.plotly as py
-from plotly import tools
-init_notebook_mode(connected=True)
-from sklearn.feature_extraction import stop_words
-import plotly.graph_objs as go
-from collections import Counter
 import re
 import string
 import nltk
+import numpy as np
+import gensim
+from itertools import chain
+from plotly import __version__
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+from plotly.grid_objs import Grid, Column
+from plotly import tools
+from sklearn.feature_extraction import stop_words
+from collections import Counter
 from nltk.stem.porter import *
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import TfidfVectorizer
-import numpy as np
 from gensim import corpora, models
-import gensim
 from countryinfo import countries
+
+pyLDAvis.enable_notebook()
+init_notebook_mode(connected=True)
 
 
 def exclude_urls(text):
